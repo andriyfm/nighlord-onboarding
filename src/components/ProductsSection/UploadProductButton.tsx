@@ -14,8 +14,9 @@ export const UploadProductButton = () => {
     <>
       <button
         className={cls(
-          "flex w-[228px] p-4 flex-col justify-center items-center gap-3 rounded-xl border-[2px] border-dashed border-[#313131] bg-[#1E1E1E] self-stretch",
-          products.length === 0 && "h-[206px]"
+          "flex w-[228px] p-4 flex-col justify-center items-center gap-3 rounded-xl bg-[#1E1E1E] self-stretch",
+          products.length === 0 &&
+            "h-[206px] border-[2px] border-dashed border-[#313131]"
         )}
         onClick={() => setIsOpen(true)}
       >
