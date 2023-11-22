@@ -4,6 +4,7 @@ import { ButtonCloseModal } from "./ButtonCloseModal";
 import { FloatingMessage } from "./FloatingMessage";
 import { FormNewProduct } from "./FormNewProduct";
 import { Heading } from "./Heading";
+import { useProductContext } from "@/contexts/ProductContext";
 
 interface Props {
   isOpen: boolean;
@@ -11,8 +12,11 @@ interface Props {
 }
 
 export const NewProductModal: FC<Props> = ({ isOpen, onClose }) => {
+  const { addProduct } = useProductContext();
+
   const handleAddProduct = () => {
     onClose();
+    addProduct({ id: 2, name: "new product" });
   };
 
   return (
